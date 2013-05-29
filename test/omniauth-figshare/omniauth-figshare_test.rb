@@ -1,9 +1,9 @@
 require 'omniauth-figshare'
 require 'test/unit'
 
-class TestOmniAuth::Figshare < Test::Unit::TestCase
-  def test_omniauth-figshare
-    assert_equal 3, 1 + 1, "TODO write tests"
+class TestOmniAuthFigshare < Test::Unit::TestCase
+  def test_omniauth_figshare
+    # no tests yet :(
   end
 end
 
