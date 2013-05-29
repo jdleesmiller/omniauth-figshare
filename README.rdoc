@@ -53,8 +53,10 @@ successful (or failed) authentication:
 
 For more information, see
 
-* http://railscasts.com/episodes/241-simple-omniauth
-* https://github.com/intridea/omniauth/wiki
+* https://github.com/intridea/omniauth/wiki -- the official OmniAuth docs
+* http://railscasts.com/episodes/241-simple-omniauth -- for background
+* http://railscasts.com/episodes/235-omniauth-part-1 -- for integration with devise
+* http://railscasts.com/episodes/235-omniauth-part-2 -- for integration with devise 
 
 === Notes
 
