@@ -4,3 +4,4 @@ pkg/*
 .bundle
 /rcov
 /rdoc
+Gemfile.lock
