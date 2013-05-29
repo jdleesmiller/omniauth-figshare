@@ -9,8 +9,7 @@ Gem::Specification.new do |s|
   s.version           = OmniAuth::Figshare::VERSION
   s.platform          = Gem::Platform::RUBY
   s.authors           = ['John Lees-Miller']
-  s.email             = ['jdleesmiller']
-  s.homepage          = 'https://github.com/jdleesmiller'
+  s.homepage          = 'https://github.com/jdleesmiller/omniauth-figshare'
   s.summary           = %q{An OmniAuth strategy for the figshare API.}
   s.description       = %q{An OmniAuth Strategy for the figshare API. You can use it to authenticate users against the figshare API in your ruby on rails / sinatra / other rack-based web application.}
 
