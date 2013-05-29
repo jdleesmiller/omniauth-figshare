@@ -2,8 +2,6 @@
 
 * https://github.com/jdleesmiller/omniauth-figshare
 
-== SYNOPSIS
-
 An OmniAuth Strategy for the figshare API. You can use it to authenticate users
 against the figshare API in your ruby on rails / sinatra / other rack-based web
 application.
@@ -29,7 +27,7 @@ settings and stored in environmental variables.
 Then create routes 
 
   match '/auth/figshare/callback', to: 'authentications#create'
-  match "/auth/failure", to: "authentications#failure"
+  match '/auth/failure', to: 'authentications#failure'
 
 and an +AuthenticationController+ to handle the postback from figshare upon
 successful (or failed) authentication:
