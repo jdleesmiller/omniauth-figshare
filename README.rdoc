@@ -1,0 +1,90 @@
+= omniauth-figshare
+
+* https://github.com/jdleesmiller/omniauth-figshare
+
+== SYNOPSIS
+
+An OmniAuth Strategy for the figshare API. You can use it to authenticate users
+against the figshare API in your ruby on rails / sinatra / other rack-based web
+application.
+
+=== Usage
+
+Add this strategy to your Gemfile:
+
+  gem 'omniauth-figshare'
+
+Then add the strategy as Rack middleware. In rails, you can add an initializer
++config/initializers/omniauth.rb+ containing 
+
+  Rails.application.config.middleware.use OmniAuth::Builder do
+    provider :figshare,
+      ENV['FIGSHARE_CONSUMER_KEY'],
+      ENV['FIGSHARE_CONSUMER_SECRET'],
+  end
+
+where the consumer key and secret are obtained from your figshare app's
+settings and stored in environmental variables.
+
+Then create routes 
+
+  match '/auth/figshare/callback', to: 'authentications#create'
+  match "/auth/failure", to: "authentications#failure"
+
+and an +AuthenticationController+ to handle the postback from figshare upon
+successful (or failed) authentication:
+
+  class AuthenticationsController < ApplicationController
+    #
+    # We use this only to connect oauth accounts to existing wL accounts, at
+    # present.
+    #
+    def create
+      auth = env["omniauth.auth"]
+      # ...
+      # You should store
+      #   auth.credentials.token
+      #   auth.credentials.secret
+      # for future authentication against the figshare API. auth[:uid] is the
+      # user's figshare user id.
+      #
+      # hint: check env['omniauth.origin'] to redirect the user to wherever they
+      # were trying to get to before connecting
+    end
+  end
+
+For more information, see
+
+* http://railscasts.com/episodes/241-simple-omniauth
+* https://github.com/intridea/omniauth/wiki
+
+=== Notes
+
+Figshare supports OAuth 1.0, so this is just a light wrapper over the standard
+OmniAuth OAuth strategy.
+
+== LICENSE
+
+(The MIT License)
+
+Copyright (c) 2013 John Lees-Miller
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+'Software'), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
