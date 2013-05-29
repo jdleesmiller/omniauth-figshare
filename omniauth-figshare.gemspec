@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.authors           = ['John Lees-Miller']
   s.email             = ['jdleesmiller']
   s.homepage          = 'https://github.com/jdleesmiller'
-  s.summary           = %q{OAuth 1.0 OmniAuth strategy for figshare}
+  s.summary           = %q{An OmniAuth strategy for the figshare API.}
   s.description       = %q{An OmniAuth Strategy for the figshare API. You can use it to authenticate users against the figshare API in your ruby on rails / sinatra / other rack-based web application.}
 
   s.rubyforge_project = 'omniauth-figshare'

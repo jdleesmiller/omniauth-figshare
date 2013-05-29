@@ -63,6 +63,9 @@ For more information, see
 Figshare supports OAuth 1.0, so this is just a light wrapper over the standard
 OmniAuth OAuth strategy.
 
+This is an extraction from writeLaTeX, the online scientific writing platform
+(www.writelatex.com).
+
 == LICENSE
 
 (The MIT License)
