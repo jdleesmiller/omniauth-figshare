@@ -1,7 +1,7 @@
 require 'omniauth-figshare'
-require 'test/unit'
+require 'minitest/autorun'
 
-class TestOmniAuthFigshare < Test::Unit::TestCase
+class TestOmniAuthFigshare < MiniTest::Test
   def test_omniauth_figshare
     # no tests yet :(
   end

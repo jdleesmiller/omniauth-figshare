@@ -1,9 +1,9 @@
 # -*- encoding: utf-8 -*-
 lib = File.expand_path('../lib/', __FILE__)
 $:.unshift lib unless $:.include?(lib)
- 
+
 require 'omniauth-figshare/version'
- 
+
 Gem::Specification.new do |s|
   s.name              = 'omniauth-figshare'
   s.version           = OmniAuth::Figshare::VERSION
@@ -16,8 +16,8 @@ Gem::Specification.new do |s|
   s.rubyforge_project = 'omniauth-figshare'
 
   s.add_runtime_dependency 'omniauth-oauth', '~> 1.0.1'
-  s.add_runtime_dependency 'multi_json', '~> 1.6.1'
-  s.add_development_dependency 'gemma', '~> 3.0.0'
+  s.add_runtime_dependency 'multi_json', '~> 1.9.3'
+  s.add_development_dependency 'gemma', '~> 4.1'
 
   s.files       = Dir.glob('{lib,bin}/**/*.rb') + %w(README.rdoc)
   s.test_files  = Dir.glob('test/omniauth-figshare/*_test.rb')
