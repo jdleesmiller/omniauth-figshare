@@ -26,7 +26,7 @@ module OmniAuth
       option :name, 'figshare'
       
       option :client_options, {
-        :site => 'http://api.figshare.com/v1/pbl'
+        :site => 'https://api.figshare.com/v1/pbl'
       }
 
       uid {
